@@ -92,6 +92,11 @@
             <scope>provided</scope>
         </dependency>-->
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
        <!-- <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-oauth2</artifactId>
@@ -99,11 +104,11 @@
 
 
         <!--热部署-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-devtools</artifactId>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
 
         <!-- 测试依赖 -->
         <dependency>
@@ -139,6 +144,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <dependencies>
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>springloaded</artifactId>
+                        <version>1.2.8.RELEASE</version>
+                    </dependency>
+
+                </dependencies>
+
                 <configuration>
                     <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
                     <!--开发中使用devtools 打包忽略-->
