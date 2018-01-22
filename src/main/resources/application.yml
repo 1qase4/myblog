@@ -18,9 +18,12 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
+    dbcp2:
+      initial-size: 3
+      min-idle: 2
+      max-idle: 10
   thymeleaf:
     mode: HTML5
-    cache: false
   #字符集和json格式工具
   http:
     encoding:
